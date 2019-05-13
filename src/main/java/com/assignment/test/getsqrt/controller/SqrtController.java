@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,7 +37,13 @@ public class SqrtController {
     public Output calculateSqrt(List<Integer> numberList) {
         Stream<Integer> sInputs = numberList.stream();
         Output opObj = new Output();
-        opObj.setOutput(Math.sqrt(sInputs.sorted(Comparator.reverseOrder()).limit(3).map(x -> x * x).mapToInt(x -> x).sum()));
+        opObj.setOutput(new BigDecimal(Math.sqrt(
+                sInputs.sorted(Comparator.reverseOrder()).
+                        limit(3).
+                        map(x -> x * x).
+                        mapToInt(x -> x).
+                        sum())).
+                setScale(2, BigDecimal.ROUND_HALF_UP));
         return opObj;
 
     }

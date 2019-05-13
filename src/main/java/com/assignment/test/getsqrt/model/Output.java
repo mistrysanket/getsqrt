@@ -1,13 +1,15 @@
 package com.assignment.test.getsqrt.model;
 
-public class Output {
-    private Double output;
+import java.math.BigDecimal;
 
-    public Double getOutput() {
+public class Output {
+    private BigDecimal output;
+
+    public BigDecimal getOutput() {
         return output;
     }
 
-    public void setOutput(Double output) {
+    public void setOutput(BigDecimal output) {
         this.output = output;
     }
 }

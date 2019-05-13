@@ -25,7 +25,7 @@ public class SqrtControllerTest {
             test1.add(id);
         }
         //The calculated value should match with expected result
-        Assert.assertEquals("5.385164807134504", sc.calculateSqrt(test1).getOutput().toString());
+        Assert.assertEquals("5.39", sc.calculateSqrt(test1).getOutput().toString());
     }
 
     @Test

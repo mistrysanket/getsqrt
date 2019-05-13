@@ -53,7 +53,7 @@ Body
 * Click Send and you will get following output
 Result
 ```{```
-   ``` "output": 8.774964387392123```
+   ``` "output": 8.77```
 ```}```
 
 ## Testing
